@@ -3,8 +3,8 @@
         ".vscode/**",
         "**/*.scss",
         "**/*.sass",
-        "**/*.ts"
-    ]
-
-    
+        "**/*.ts",
+        "**/db.json",
+    ],
+    "liveServer.settings.host" : "localhost"
 }
