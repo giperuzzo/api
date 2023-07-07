@@ -9,10 +9,11 @@
      <h1>Read com get</h1>
     <h2>Requisição e Resposta via API</h2>
     <div id="listaProdutos"></div>
+    <script src=" ./assets/scripts/estilos.js"></script>
+    
     <script>
         // criando uma requisiçao de resposta via javascript/api
         
-
         fetch('http://localhost:3000/produtos',{
             method : 'GET',
             headers: {
@@ -23,6 +24,7 @@
         .then(resposta => {
             for(let i = 0; i < resposta.length; i++) {
                 const ul = document.createElement('ul');
+                ul.classList.add('produto');
 
                 ul.appendChild(document.createElement('li')).innerHTML = resposta[i].id;
                 ul.appendChild(document.createElement('li')).innerHTML = resposta[i].descricao;
