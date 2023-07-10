@@ -3,5 +3,8 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    list-style:none
+    list-style:none;
+    font-family: 'Ysabeau Office';
+    
+    
 }

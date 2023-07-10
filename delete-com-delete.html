@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Delete com Delete</title>
 </head>
 <body>
-     <h1>Read com get</h1>
-    <h2>Requisição e Resposta via API</h2>
+     <h1>Delete com delete</h1>
+    <h2>Deletando um produto com delete -crud- create,read update delete</h2>
     <div id="listaProdutos"></div>
    
     
@@ -29,6 +29,14 @@
                 ul.appendChild(document.createElement('li')).innerHTML = resposta[i].id;
                 ul.appendChild(document.createElement('li')).innerHTML = resposta[i].descricao;
                 ul.appendChild(document.createElement('li')).innerHTML = resposta[i].preco;
+
+                const liDelete = document.createElement('li');
+                const btDelete = document.createElement('button');
+                btDelete.innerHTML = 'X';
+                btDelete.style.color = 'red';
+                btDelete.classList.add = ('delete-button');
+                btDelete.value = resposta[i].id;
+                ul.appendChild(liDelete).appendChild(btDelete);
                 
                 document.querySelector('#listaProdutos').appendChild(ul);
             }
