@@ -1,11 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>UP DATE COM PUT</title>
 </head>
+
 <body>
-<h1> Agora vai</h1>
+    <header>
+        <div class="page-title">
+        <h1>UP DATE COM PUT</h1>
+    </div>
+
+    </header>
+    <section class="container-cadastro">
+    <h2 class="sub-titulo">Cadastro de Produtos</h2>
+    <form action="" method="post">
+        <div class ="label-input">
+            <label class= "ident" for="id" class="id">ID</label>
+            <input class = "input-ident" type="text" id="id" > <br>
+        </div>
+        <div class ="label-input">
+            <label class = "descricao" for="id">Descricao</label>
+            <input class = "input-descricao" type="text" id="Descricao"><br>
+        </div>
+        <div class ="label-input">
+            <label class = "preco" for="id">Preco</label>
+            <input class = "input-preco" type="text" id="Preco"><br>
+        </div>
+        <button class="button" type="button" id="btAtualizar">Atualizar</button>
+
+    </form>
+
+    </section>
+    <div id="listaProdutos"></div>
+    <script>
+        // criando uma requisiçao de resposta via javascript/api
+
+        document.querySelector('#btAtualizar').addEventListener('click', () => {
+
+            const dados = {
+                'id': null,
+                'descricao': document.querySelector('#descricao').value,
+                'preco': document.querySelector('#preco').value
+            }
+
+            const id = document.querySelector('#id').value;
+//atualiza os produtos
+            fetch('http://localhost:3000/produtos', {
+                method: 'PUT',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(dados)
+            })
+
+                .then(resposta => {
+                    if(resposta.ok) {
+                        alert('Produto Atualizado');
+                        location.reload(); //jeito porcao, vamos melhorar depois
+                    }
+                })
+
+        });
+
+        //busca os produtos
+        fetch('http://localhost:3000/produtos', {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json'
+            }
+
+        })
+            .then(resposta => resposta.json())
+            .then(resposta => {
+                for (let i = 0; i < resposta.length; i++) {
+                    const ul = document.createElement('ul');
+
+                    ul.appendChild(document.createElement('li')).innerHTML = resposta[i].id;
+                    ul.appendChild(document.createElement('li')).innerHTML = resposta[i].descricao;
+                    ul.appendChild(document.createElement('li')).innerHTML = resposta[i].preco;
+
+                    document.querySelector('#listaProdutos').appendChild(ul);
+                }
+
+            })
+
+    </script>
+    <script src=" ./assets/scripts/estilos.js"></script>
+
 </body>
+
 </html>
