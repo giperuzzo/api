@@ -13,26 +13,34 @@
     </div>
 
     </header>
-    <section class="container-cadastro">
-    <h2 class="sub-titulo">Cadastro de Produtos</h2>
+    <section class="container"> 
+        <div class="container-alteracao-de-produto">
+    <h2 class="sub-titulo">Alteração de Produto</h2>
     <form action="" method="post">
         <div class ="label-input">
             <label class= "ident" for="id" class="id">ID</label>
-            <input class = "input-ident" type="text" id="id" > <br>
+            <input class="input input-ident" type="text" id="id" placeholder="digite o ID do produto"> <br>
         </div>
         <div class ="label-input">
             <label class = "descricao" for="id">Descricao</label>
-            <input class = "input-descricao" type="text" id="Descricao"><br>
+            <input class="input input-descricao" type="text" id="Descricao" placeholder ="digite a descrição do produto"><br>
         </div>
         <div class ="label-input">
             <label class = "preco" for="id">Preco</label>
-            <input class = "input-preco" type="text" id="Preco"><br>
+            <input class = " input input-preco" type="text" id="Preco" placeholder="digite o preço do produto"><br>
         </div>
-        <button class="button" type="button" id="btAtualizar">Atualizar</button>
-
+        <div class = "button">
+            <button type="button" id="btAtualizar">Atualizar</button>
+            <button type="button" id="btCancelar">Cancelar</button>
+            </div>
     </form>
 
+    
+        </div>
     </section>
+    <div>
+    <h2> Lista de Produtos</h2>
+    </div>
     <div id="listaProdutos"></div>
     <script>
         // criando uma requisiçao de resposta via javascript/api

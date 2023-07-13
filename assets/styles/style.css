@@ -1,45 +1,56 @@
 body {
     width: 1440 px;
     height: 1024px;
-    background-color: bisque;
+    background: #FEFFE4;
 }
 
-.page-title{
-color: #000;
-text-align: center;
-font-family: Ubuntu;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.page-title {
+    color: #000;
+    display: flex;
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 
 }
 
-.container-cadastro {
-width: 420px;
-height: 439px;
-margin: auto;
-flex: center;
-justify-content: center;
-border-radius: 12px;
-background: #FFF;
-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-color: black
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container-alteracao-de-produto {
+    width: 420px;
+    height: px;
+    justify-content: center;
+    padding: 60px;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: black;
 
 }
 
 .sub-titulo {
-display: flex;
-width: 420px;
-height: 38px;
-justify-content: center;
-color: #000;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-    
+    display: flex;
+    width: 273px;
+    height: 35px;
+    text-align: center;
+    color: #000;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: auto;
 
+}
+
+.label-input {
+    display: flex;
+    flex-direction: column;
+
+    /*background-color: pink;*/
 }
 
 .ident {
@@ -50,6 +61,53 @@ line-height: normal;
     font-weight: 400;
     line-height: normal;
 
+
+}
+
+.input-ident {
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid #000;
+    color: black;
+
+}
+
+.input::placeholder {
+    color: #9A9A9A;
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.descricao {
+    color: #000;
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.input-descricao {
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    height: 34px;
+    border-radius: 4px;
+    border: 1px solid #000;
+    color: black;
 }
 
 .preco {
@@ -59,8 +117,6 @@ line-height: normal;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
-
 }
 
 .input-preco {
@@ -71,52 +127,52 @@ line-height: normal;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    height: 34px;
+    border-radius: 4px;
+    border: 1px solid #000;
 }
 
-.input-ident {
-width: 304px;
-height: 34px;
-border-radius: 4px;
-border: 1px solid #000;
-color: black;
-
-}
-
-.descricao{
-    color: #000;
-    font-family: Ubuntu;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-
-}
-
-.input-descricao{
-width: 304px;
-height: 34px;
-border-radius: 4px;
-border: 1px solid #000;
-color: black;
-}
-
-.label-input{
-display:flex;    
-flex-direction: column;
-background-color: pink;
-
-
-
-
-}
 .button {
-width: 303px;
-height: 46px;
-display: flex;
-justify-content: center;
-border-radius: 4px;
-background: #48A4FA;
-color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+}
+
+#btAtualizar {
+    width: 167px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    background: #48A4FA;
+    color: white;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+#btAtualizar:hover {
+    background: #007BED;
+}
+
+#btAtualizar:active {
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+#btCancelar {
+    width: 167px;
+    height: 30px;
+    border: none;
+    background: #F59999;
+    color: white;
+}
+
+#btCancelar:hover {
+    background: #FF5F5F;
+
+}
+
+#btCancelar:active {
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
 .produto {
@@ -124,8 +180,8 @@ color: white;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    list-style:none;
+    list-style: none;
     font-family: 'Ysabeau Office';
-    
-    
+
+
 }
