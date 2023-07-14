@@ -22,12 +22,12 @@
             <input class="input input-ident" type="text" id="id" placeholder="digite o ID do produto"> <br>
         </div>
         <div class ="label-input">
-            <label class = "descricao" for="id">Descricao</label>
+            <label class ="descricao" for="id">Descricao</label>
             <input class="input input-descricao" type="text" id="Descricao" placeholder ="digite a descrição do produto"><br>
         </div>
         <div class ="label-input">
-            <label class = "preco" for="id">Preco</label>
-            <input class = " input input-preco" type="text" id="Preco" placeholder="digite o preço do produto"><br>
+            <label class ="preco" for="id">Preco</label>
+            <input class ="input input-preco" type="text" id="Preco" placeholder="digite o preço do produto"><br>
         </div>
         <div class = "button">
             <button type="button" id="btAtualizar">Atualizar</button>
@@ -38,7 +38,7 @@
     
         </div>
     </section>
-    <div>
+    <div class="descricao">
     <h2> Lista de Produtos</h2>
     </div>
     <div id="listaProdutos"></div>
@@ -84,10 +84,25 @@
             .then(resposta => {
                 for (let i = 0; i < resposta.length; i++) {
                     const ul = document.createElement('ul');
+                    ul.id = resposta[i].id;
 
-                    ul.appendChild(document.createElement('li')).innerHTML = resposta[i].id;
-                    ul.appendChild(document.createElement('li')).innerHTML = resposta[i].descricao;
-                    ul.appendChild(document.createElement('li')).innerHTML = resposta[i].preco;
+                    const liId = document.createElement('li');
+                    liId.setAttribute('data-produto' , 'id');
+                    liId.innerHTML = resposta[i].id;
+                    liId.classList.add('poduto-id');
+
+                    const liDescricao = document.createElement('li');
+                    liDescricao.setAttribute('data-produto' , 'descricao');
+                    liDescricao.innerHTML = resposta[i].descricao;
+
+                    const liPreco = document.createElement('li');
+                    liPreco.setAttribute('data-produto' , 'preco');
+                    liPreco.innerHTML = resposta[i].preco;
+
+                   
+
+                    ul.append(liId , liDescricao , liPreco);
+                    
 
                     document.querySelector('#listaProdutos').appendChild(ul);
                 }
