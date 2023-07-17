@@ -50,7 +50,6 @@ body {
 .label-input {
     display: flex;
     flex-direction: column;
-
     background-color: pink;
 }
 
@@ -90,7 +89,6 @@ body {
 }
 
 .descricao {
-    color: #000;
     font-family: Ubuntu;
     font-size: 20px;
     font-style: normal;
@@ -179,20 +177,11 @@ body {
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
-.descricao {
-    display: flex;
-    justify-content: center;
-}
-
 #listaProdutos ul {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between ;
     font-family: 'Ysabeau Office';
-    width: 1332px;
     height: 43px;
-    /*background-color: #007BED;*/
-    list-style: none;
-    margin: auto;
     border-bottom: 1px solid #000;
     background: #FFF;
 }
@@ -209,9 +198,17 @@ body {
 }
 #listaProdutos li {
     display: flex;
-    padding-inline: 40px;
+    justify-content: center;
     font-size: 16pt;
-}
+    /*background-color:pink ;*/
+   
 
+}
+.produto-id {
+
+    background-color: #48A4FA;
+    ;
+    
+}
 
 
