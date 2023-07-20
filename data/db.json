@@ -1,10 +1,9 @@
 {
-
   "produtos": [
     {
       "id": 1,
       "descricao": "sapato gatis",
-      "preco": "199.90"
+      "preco": "195.50"
     },
     {
       "id": 2,
@@ -13,8 +12,8 @@
     },
     {
       "id": 3,
-      "descricao": "sandalia venus",
-      "preco": "299.90"
+      "descricao": "Sandalia venus",
+      "preco": "199,90"
     },
     {
       "id": 4,

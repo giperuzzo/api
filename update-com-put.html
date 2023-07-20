@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UP DATE COM PUT</title>
+    <title>UPDATE COM PUT</title>
 </head>
 
 <body>
     <header>
         <div class="page-title">
-        <h1>UP DATE COM PUT</h1>
+        <h1>UPDATE COM PUT</h1>
     </div>
 
     </header>
     <section class="container"> 
         <div class="container-alteracao-de-produto">
     <h2 class="sub-titulo">Alteração de Produto</h2>
-    <form action="" method="post">
+    <form action=""method="post">
         <div class ="label-input">
             <label class= "ident" for="id" class="id">ID</label>
             <input class="input input-ident" type="text" id="id" placeholder="digite o ID do produto"> <br>
@@ -58,7 +58,7 @@
 
             const id = document.querySelector('#id').value;
 //atualiza os produtos
-            fetch('http://localhost:3000/produtos', {
+            fetch( `http://localhost:3000/produtos/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-type': 'application/json'
@@ -88,6 +88,7 @@
                 for (let i = 0; i < resposta.length; i++) {
                     const ul = document.createElement('ul');
                     ul.id = resposta[i].id;
+                    ul.classList.add('produto');
                     
                     const liId = document.createElement('li');
                     liId.setAttribute('data-produto' , 'id');
@@ -115,7 +116,7 @@
 
     </script>
     <script src=" ./assets/scripts/estilos.js"></script>
-    <script src=" .api\update-com-put.js"></script>
+    <script type="module" src=" ./assets/scripts/update-com-put.js"></script>
 
 </body>
 

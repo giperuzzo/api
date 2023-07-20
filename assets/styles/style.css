@@ -34,15 +34,9 @@ body {
 }
 
 .sub-titulo {
-    display: flex;
-    width: 273px;
-    height: 35px;
     text-align: center;
-    color: #000;
-    font-size: 25px;
-    font-style: normal;
+    color: #000;  
     font-weight: 400;
-    line-height: normal;
     margin: auto;
 
 }
@@ -207,7 +201,6 @@ body {
 .produto-id {
 
     background-color: #48A4FA;
-    ;
     
 }
 
