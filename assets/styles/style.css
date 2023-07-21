@@ -173,7 +173,7 @@ body {
 
 #listaProdutos ul {
     display: flex;
-    justify-content:space-between ;
+      
     font-family: 'Ysabeau Office';
     height: 43px;
     border-bottom: 1px solid #000;
@@ -191,17 +191,22 @@ body {
 
 }
 #listaProdutos li {
-    display: flex;
-    justify-content: center;
     font-size: 16pt;
-    /*background-color:pink ;*/
+   
    
 
 }
-.produto-id {
 
-    background-color: #48A4FA;
+li.produto-id {
+    width:240px ;
+    
     
 }
 
+.li-descricao {
+    width: 640px ;
+}
 
+.li-preco {
+    width:440px ;
+}
